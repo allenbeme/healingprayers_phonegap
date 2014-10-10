@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html><!--HTML5 doctype-->
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+<script type="text/javascript" language="javascript">
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
+    $.ui.autoLaunch = false;
+    $.ui.useOSThemes = true; //Change this to false to force a device theme
+    $.ui.blockPageScroll();
+    $(document).ready(function () {
+        if ($.ui.useOSThemes && (!$.os.ios||$.os.ios7))
+            $("#afui").removeClass("ios");
+    });
+</script>
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">
+</head>
+
+<div id="afui" class="ios">
+    <div id="header" class="header"></div>
+    <div id="content" style="">
+        <div class="panel" title="Main" id="main" selected="selected" style="" data-appbuilder-object="page">
+
+            <div class="container" style="width: 100%; height: auto; position: relative;" data-appbuilder-object="container">
+                <img src="images/startscreen.jpg" style="width: 100%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title="Peace">
+                <div class="text_item" data-appbuilder-object="text" style="font-size: 36px; text-align: center; font-weight: bold;"></div>
+
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center; font-size: 36px;">Healing Words And Prayers</div>
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center; font-style: italic; font-weight: bold;">
+                    <br>Scriptures and meditations for a health mind, body and soul.</div>
+            </div>
+        </div>
+        <div class="panel" title="About" id="About" data-appbuilder-object="page" style="">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                    <img src="images/mountainstream.jpg" style="text-align: center;" alt="Title" data-appbuilder-object="image"
+                    class="" title="Bible">
+                    <h2>Healing Words</h2>
+                    <p>Physical health is the will of God. Emotional and and mental
+                        health is the will of God. Prosperity is the will of God.
+                        Knowing this, we must focus on believing that God always
+                        honors His Word and answers petitions which are made according
+                        to His will. And His will is not hidden from His children:
+                        we have the scripture and we have the Holy Spirit.</p>
+
+                    <p>One way to deepen our faith in God is to speak the Word of
+                        God. Recount His promises. Review the scriptures which
+                        testify to His goodness and grace towards His children.
+                        Internalize the Word of God. Personalize it. Make it God's
+                        specific revelation to you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Start" id="page_2" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list" style="">
+                <li style="text-align:center;font-weight:bold;font-style:italic;">Search for health issues by alphabet</li>
+                <li><a href="#alist">A</a>
+                </li>
+                <li><a href="#blist">B</a>
+                </li>
+                <li><a href="#clist">C</a>
+                </li>
+                <li><a href="#dflist">D-F</a>
+                </li>
+                <li><a href="#gilist">G-I</a>
+                </li>
+                <li><a href="#jnlist">J-N</a>
+                </li>
+                <li><a href="#orlist">O-R</a>
+                </li>
+                <li><a href="#stlist">S-T</a>
+                </li>
+                <li><a href="#uzlist">U-Z</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="A" id="alist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list" style="">
+                <li><a href="#aches">Aches</a>
+                </li>
+                <li><a href="#acne">Acne</a>
+                </li>
+                <li><a href="#addiction">Addictions</a>
+                </li>
+                <li><a href="#aids">AIDS</a>
+                </li>
+                <li><a href="#alcholism">Alcoholism</a>
+                </li>
+                <li><a href="#allergies">Allergies</a>
+                </li>
+                <li><a href="#alzheimers">Alzheimer's</a>
+                </li>
+                <li><a href="#anemia">Anemia</a>
+                </li>
+                <li><a href="#anorexia">Anorexia</a>
+                </li>
+                <li><a href="#anxiety">Anxiety</a>
+                </li>
+                <li><a href="#arteriosclerosis">Arteriosclerosis</a>
+                </li>
+                <li><a href="#arthritis">Arthritis</a>
+                </li>
+                <li><a href="#asthma">Asthma</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Aches" id="aches" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                <h1>Healing Words For<br>Aches</h1>
+                <p><b>	Psalms 25:18</b>
+                    <br>
+                    <i>Unto thee, O Lord, do I lift up my soul.</i>
+                </p>
+                <p>
+                    Thank you Lord, for you have seen me in my distress and suffering. You have healed
+                    my diseases, eased my pain and forgiven my sins.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Acne" id="acne" data-appbuilder-object="page" style="text-align: center;">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Acne</h1>
+                <p>	<b>Ephesians 5:27</b>
+                    <br>
+                    <i>That he might present it to himself a glorious church, not having spot, or wrinkle, or any such thing; but that it should be holy and without blemish.</i>
+                </p>
+
+                <p>Through Jesus Christ I am in your sight - and this is the only
+                    reality - a perfect and holy person without spot, wrinkle.
+                    or blemish.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Addiction" id="addiction" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center;">
+                <h1>Healing Words For<br>Addictions</h1>
+                <p><b>Proverbs 31:4</b>
+                    <br>
+                    <i>It is not for kings, O Lemuel, it is not for kings to drink wine; nor for princes strong drink:</i>
+                </p>
+
+                <p>It is not for me, a child of God, a prince and priest of the almighty
+                    to be a slave to wine, drugs, or any addictive substance. No
+                    substance shall be allowed to diminish my judgment nor impair
+                    my ability to discern truth.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="AIDS" id="aids" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center;">
+                <h1>Healing Words For<br>AIDS</h1>
+                <p><b>Psalms 118:17</b>
+                    <br>
+                    <i></i>I shall not die, but live, and declare the works of
+                    the Lord.</p>
+
+                <p>	<b>Psalms 91:3</b>
+                    <br>Surely he shall deliver thee from the snare of the fowler,
+                    and from the noisome pestilence.</p>
+
+                <p>
+                    God will deliver me from what others may think is a sure death. God's power will
+                    heal me from any disease. I declare right now to all that will
+                    listen that I will live and not die.</p>
+            </div>
+        </div>
+        <div class="panel" title="Alcholism" id="alcholism" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                <h1>Healing Words For<br>Alcoholism</h1>
+                <p><b>I Peter 4:2-4</b>
+                    <br>
+                    <i>That he no longer should live the rest of his time in the flesh to the lusts of men, but to the will of God. 3 For the time past of our life may suffice us to have wrought the will of the Gentiles, when we walked in lasciviousness, lusts, excess of wine, revellings, banquetings, and abominable idolatries</i>
+                </p>
+
+                <p>I have the same mind as Christ Jesus. Sin no longer dominates my
+                    life. I no longer over endulge in alcohol or drugs. Getting
+                    high is no longer a part of my life.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Allergies" id="allergies" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Allergies</h1>
+                <p><b>Genesis 1:29</b>
+                    <br>
+                    <i>And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.</i>
+                </p>
+                <p>
+                    The plants God created are for my food, clothing, shelter and comfort. I do not
+                    strive and contend with nature. I can enjoy the beauty of the
+                    outdoors any time, any season. I can enjoy the sights, smells
+                    and textures all created things and give thanks to God who
+                    made them for my pleasure.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Alzheimer's" id="alzheimers" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Alzheimer's Disease</h1>
+                <p><b>Titus 2:2-3</b>
+                    <br>
+                    <i>2 That the aged men be sober, grave, temperate, sound in faith, in charity, in patience.3 The aged women likewise, that they be in behaviour as becometh holiness, not false accusers, not given to much wine, teachers of good things</i>
+                </p>
+
+                <p>I am sober, serious, temperate, sound in faith, in love and in
+                    patience. I get better with age..
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Anemia" id="anemia" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Anemia</h1>
+                <p><b>Nehemiah 8:10</b>
+                    <br>
+                    <i>Then he said unto them, Go your way, eat the fat, and drink the sweet, and send portions unto them for whom nothing is prepared: for this day is holy unto our Lord: neither be ye sorry; for the joy of the Lord is your strength.</i>
+                </p>
+
+                <p>I will eat healthy, delicious foods which nurish and strengthens
+                    me, but my true source of strength is the Lord.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Anorexia" id="anorexia" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Anorexia</h1>
+                <p><b>Ecclesiastes 8:15</b>
+                    <br>
+                    <i>Then I commended mirth, because a man hath no better thing under the sun, than to eat, and to drink, and to be merry: for that shall abide with him of his labour the days of his life, which God giveth him under the sun.</i>
+                </p>
+                <p>I will eat and drink with joy and thanksgiving for this is the
+                    will of God.</p>
+            </div>
+        </div>
+        <div class="panel" title="Anxiety" id="anxiety" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Anxiety</h1>
+                <p><b>Psalm 37:1-4</b>
+                    <br>
+                    <i>Fret not thyself because of evildoers, neither be thou envious against the workers of iniquity. 2 For they shall soon be cut down like the grass, and wither as the green herb. 3 Trust in the Lord, and do good; so shalt thou dwell in the land, and verily thou shalt be fed. 4 Delight thyself also in the Lord: and he shall give thee the desires of thine heart.</i>
+                </p>
+
+                <p>I am free from worry and anxiety because I trust God. The peace
+                    of God surrounds and permeates my being. I know I am loved
+                    and cared for.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Arteriosclerosis" id="arteriosclerosis" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Arteriosclerosis</h1>
+                <p><b>Joel 3:21</b>
+                    <br>
+                    <i>For I will cleanse their blood that I have not cleansed: for the Lord dwelleth in Zion.</i>
+                </p>
+
+                <p>My blood is cleansed of harmful plaque-forming substances. My blood
+                    flows freely and unobstructed.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Arthritis" id="arthritis" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Arthritis</h1>
+                <p>	<b>Joshua 14:10-11</b>
+                    <br>
+                    <i>And now, behold, the Lord hath kept me alive, as he said, these forty and five years, even since the Lord spake this word unto Moses, while the children of Israel wandered in the wilderness: and now, lo, I am this day fourscore and five years old. 11 As yet I am as strong this day as I was in the day that Moses sent me: as my strength was then, even so is my strength now, for war, both to go out, and to come in.</i>
+                </p>
+
+                <p>As I grow older, I grow stronger. My bones and joints function
+                    with the ease and freedom for which they were designed. Meditating
+                    on the word of God and praise is health to my bones.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Asthma" id="asthma" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Asthma</h1>
+                <p>	<b>Genesis 2:7 (CEV) </b>
+                    <br>
+                    <i>The Lord God took a handful of soil and made a man. God breathed life into the man, and the man started breathing.</i>
+                </p>
+
+                <p>The Spirit of God surrounds me, flows through me and permeates
+                    my mind, body and soul. Your Spirit fills every part of my
+                    lungs with life-giving oxygen and strength. I breathe freely
+                    and fearlessly because I put my trust in You
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="B" id="blist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#back">Back Problems</a>
+                </li>
+                <li><a href="#baldness">Baldness</a>
+                </li>
+                <li><a href="#bites">Insect/Animal Bites</a>
+                </li>
+                <li><a href="#blindness">Blindness</a>
+                </li>
+                <li><a href="#breast">Breast Problems</a>
+                </li>
+                <li><a href="#breathing">Breathing Problems</a>
+                </li>
+                <li><a href="#brokenbones">Broken Bones</a>
+                </li>
+                <li><a href="#bruises">Bruises</a>
+                </li>
+                <li><a href="#bulimia">Bulimia</a>
+                </li>
+                <li><a href="#blindness">Blindness</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Back Problems" id="back" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Back Problems</h1>
+                <p><b>Nehemiah 9:5</b>
+                    <br>
+                    <i>Then the Levites, Jeshua, and Kadmiel, Bani, Hashabniah, Sherebiah, Hodijah, Shebaniah, and Pethahiah, said, Stand up and bless the Lord your God for ever and ever: and blessed be thy glorious name, which is exalted above all blessing and praise.</i>
+                </p>
+                <p>I will stand up tall and straight to bless the Lord God who strengthens
+                    and sustains me.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Baldness" id="baldness" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Baldness</h1>
+                <p><b>1 Samuel 16:7</b>
+                    <br>
+                    <i>But the Lord said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the Lord seeth not as man seeth; for man looketh on the outward appearance, but the Lord looketh on the heart.</i>
+                </p>
+                <p>God loves me for who I am inwardly. The real me - the heart - is
+                    the apple of His eye.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Bites Animal/Insect" id="bites" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Bites Animal/Insect</h1>
+                <p><b>	Mark 16:18</b>
+                    <br>
+                    <i>They shall take up serpents; and if they drink any deadly thing, it shall not hurt them; they shall lay hands on the sick, and they shall recover.</i>
+                </p>
+
+                <p>The Holy Spirit of God protects me at all times. Nothing can truly
+                    hurt God's beloved.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Blindness" id="blindness" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Blindness</h1>
+                <p>	<b>Luke 4:18-20</b>
+                    <br>
+                    <i>The Spirit of the Lord is upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised, 19 To preach the acceptable year of the Lord. 20 And he closed the book, and he gave it again to the minister, and sat down. And the eyes of all them that were in the synagogue were fastened on him.</i>
+                </p>
+
+                <p>My vision is crystal clear. Both my physical eyes and my spiritual
+                    eyes. This is a work of God.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Breast Problems" id="breast" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Breast Problems</h1>
+                <p><b>Genesis 49:25</b>
+                    <br>
+                    <i>Even by the God of thy father, who shall help thee; and by the Almighty, who shall bless thee with blessings of heaven above, blessings of the deep that lieth under, blessings of the breasts, and of the womb</i>
+                </p>
+                <p>Designed expertly and with love, every part of my body is beautiful,
+                    healthy, and functions according to God's Plan.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Breathing Problems" id="breathing" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Breathing Problems</h1>
+                <p><b>Genesis 2:7</b>
+                    <br>
+                    <i>And the Lord God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul</i>
+                </p>
+
+                <p><b>Job 27:3</b>
+                    <br>
+                    <i>All the while my breath is in me, and the spirit of God is in my nostrils</i>
+                </p>
+                <p>God breathed into me the Breath of Life and I became a living soul.
+                    My life is sustained by the Spirit/Breath of God
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Broken Bone" id="brokenbones" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Broken Bones</h1>
+                <p><b>Psalm 34:19</b>
+                    <br>
+                    <i>Many are the afflictions of the righteous: but the Lord delivereth him out of them all.</i>
+                </p>
+                <p>God is watching over me guarding over my bones. The marvelous capacity
+                    for mending He designed is at work even now. My bones are full
+                    of strength and life.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Bruises" id="bruises" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Bruises</h1>
+                <p>	<b>Luke 4:18</b>
+                    <br>
+                    <i>The Spirit of the Lord is upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised</i>
+                </p>
+                <p>He was bruised for my sake. My punishment for sins were placed
+                    upon him. My bruises are healed and I am set free.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Bulimia" id="bulimia" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Bulimia</h1>
+                <p><b>I Corinthians 3:16</b>
+                    <br>
+                    <i>Know ye not that ye are the temple of God, and that the Spirit of God dwelleth in you?</i>
+                </p>
+                <p>My body is the temple of God. His Holy Spirit dwells within me.
+                    I am a beautiful and fit habitation for the Lord
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="C" id="clist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#cancer">Cancer</a>
+                </li>
+                <li><a href="#carpeltunnel">Carpel Tunnel</a>
+                </li>
+                <li><a href="#cataracts">Cataracts</a>
+                </li>
+                <li><a href="#cholesterol">Chlolesterol</a>
+                </li>
+                <li><a href="#coldsores">Cold Sores</a>
+                </li>
+                <li><a href="#colds">Colds</a>
+                </li>
+                <li><a href="#colic">Colic</a>
+                </li>
+                <li><a href="#coma">Coma</a>
+                </li>
+                <li><a href="#constipation">Constipation</a>
+                </li>
+                <li><a href="#coughs">Coughs</a>
+                </li>
+                <li><a href="#cuts">Cuts</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Cancer" id="cancer" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Cancer</h1>
+                <p>	<b>Ephesians 3:20</b>
+                    <br>
+                    <i>Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us,</i>
+                </p>
+                <p>Nothing is impossible for God. I am constantly amazed at how His
+                    kindness and mercy is beyond all understanding. He answers
+                    my prayers is ways I never anticipate but always leave me overjoyed.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Burns" id="burns" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Burns</h1>
+                <p><b>Daniel 3:25, 3:27</b>
+                    <br>
+                    <i>He answered and said, Lo, I see four men loose, walking in the midst of the fire, and they have no hurt; and the form of the fourth is like the Son of God... 27 And the princes, governors, and captains, and the king's counsellors, being gathered together, saw these men, upon whose bodies the fire had no power, nor was an hair of their head singed, neither were their coats changed, nor the smell of fire had passed on them.</i>
+                </p>
+                <p>There is no evidence that fire has any power over me. My body can
+                    heal and restore itself because of the Wisdom and Power of
+                    God
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Carpal Tunnel" id="carpeltunnel" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Carpal Tunnel</h1>
+                <p><b>Psalm 6:2</b>
+                    <br>
+                    <i>Have mercy upon me, O Lord; for I am weak: O Lord, heal me; for my bones are vexed</i>.</p>
+                <p>Full function is restored to my fingers, hand, and wrist. I have
+                    a full range of motion and can work or play at any task as
+                    long as is necessary and appropriate. My body is no longer
+                    working against me and limiting my abilities.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Cataracts" id="cataracts" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Cataracts</h1>
+                <p><b>Matthew 9:28</b>
+                    <br>
+                    <i>And when he was come into the house, the blind men came to him: and Jesus saith unto them, Believe ye that I am able to do this? They said unto him, Yea, Lord.</i>
+                </p>
+
+                <p>My faith in the power and good intention of God has restored my
+                    sight. My spiritual eyes and my physical eyesight is better
+                    than 20/20.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Cholesterol" id="cholesterol" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Cholesterol</h1>
+                <p><b>Psalm 63:5</b>
+                    <br>
+                    <i>My soul shall be satisfied as with marrow and fatness; and my mouth shall praise thee with joyful lips</i>
+                </p>
+                <p>
+                    Fat and cholesterol are part of the diet God allows. My body is able to regulate
+                    levels of cholesterol in ways that promote excellent health
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Cold Sores" id="coldsores" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Cold Sores</h1>
+                <p><b>Proverbs 16:13 </b>
+                    <br>
+                    <i>Righteous lips are the delight of kings; and they love him that speaketh right.</i>
+                </p>
+                <p>With my lips I will bless and and lift up those I love. Nothing
+                    comes from my mouth that is not lovely, delightful, beautiful,
+                    uplifting and gentle.</p>
+            </div>
+        </div>
+        <div class="panel" title="Colds" id="colds" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Colds</h1>
+                <p><b>Deuteronomy 7:15</b>
+                    <br>
+                    <i>And the Lord will take away from thee all sickness, and will put none of the evil diseases of Egypt, which thou knowest, upon thee; but will lay them upon all them that hate thee.</i>
+                </p>
+                <p>
+                    The common diseases that seem to afflict everyone else never touch me or even come
+                    near.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Colic" id="colic" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Colic</h1>
+                <p><b>1 Corinthians 13:4</b>
+                    <br>
+                    <i>Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,</i>
+                </p>
+                <p>
+                    I love my baby so much I can endure all things.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Coma" id="coma" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Coma</h1>
+                <p><b>Psalms 57:8</b>
+                    <br>
+                    <i>Awake up, my glory; awake, psaltery and harp: I myself will awake early.</i>
+                </p>
+                <p>
+                    The prayer of faith can raise up the sick.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Constipation" id="constipation" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Constipation</h1>
+                <p><b>Psalm 51:7-10</b>
+                    <br>
+                    <i>Purge me with hyssop, and I shall be clean: wash me, and I shall be whiter than snow. 8 Make me to hear joy and gladness; that the bones which thou hast broken may rejoice. 9 Hide thy face from my sins, and blot out all mine iniquities. 10 Create in me a clean heart, O God; and renew a right spirit within me.</i>
+                </p>
+                <p>
+                    Cleanse me internally. Purge me from all the consequences of sin and disobedience
+                    to your law.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Coughs" id="coughs" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Coughs</h1>
+                <p><b>Luke 6:17</b>
+                    <br>
+                    <i>And he came down with them, and stood in the plain, and the company of his disciples, and a great multitude of people out of all Judaea and Jerusalem, and from the sea coast of Tyre and Sidon, which came to hear him, and to be healed of their diseases;</i>
+                </p>
+                <p>
+                    I am delivered of coughs, sneezes, tics, spasms, itches, and anything else which
+                    is a distracting, annoying, debilitating, or aggravating.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Cuts" id="cuts" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Cuts</h1>
+                <p><b>Jeremiah 30:17</b>
+                    <br>
+                    <i>For I will restore health unto thee, and I will heal thee of thy wounds, saith the Lord; because they called thee an Outcast, saying, This is Zion, whom no man seeketh after.</i>
+                </p>
+                <p>
+                    The Lord God has restored my health and healed all wounds.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="D Thru F" id="dflist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list" style="">
+                <li><a href="#deafness">Deafness</a>
+                </li>
+                <li><a href="#depression">Depression</a>
+                </li>
+                <li><a href="#despair">Despair</a>
+                </li>
+                <li><a href="#diabetes">Diabetes</a>
+                </li>
+                <li><a href="#diarrhea">Diarrhea</a>
+                </li>
+                <li><a href="#dizziness">Dizziness/Fainting</a>
+                </li>
+                <li><a href="#female">Fibroids/Female Problems</a>
+                </li>
+                <li><a href="#flatulence">Flatulence/Gas</a>
+                </li>
+                <li><a href="#flu">Flu</a>
+                </li>
+                <li><a href="#foot">Foot Problems</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Deafness" id="deafness" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Deafness</h1>
+                <p><b>Mark 7:34</b>
+                    <br>
+                    <i>He looked up to heaven and with a deep sigh said to him, ""Ephphatha!"" (which means, "Be opened!")</i>
+                </p>
+                <p>
+                    All impediments to my hearing both physical and spiritual are removed. I can hear
+                    clearly the faintest sound. Thank you Lord God.</p>
+            </div>
+        </div>
+        <div class="panel" title="Depression" id="depression" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Depression</h1>
+                <p><b>Psalm 147:3</b>
+                    <br>
+                    <i>He healeth the broken in heart, and bindeth up their wounds.</i>
+                </p>
+                <br>
+
+                <p>My broken heart is healed. My joy is renewed. I know what true
+                    happiness is.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Despair" id="despair" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Despair</h1>
+                <p><b>Luke 4:18</b>
+                    <br>
+                    <i>The Spirit of the LORD is upon Me, Because He has anointed Me To preach the gospel to the poor; He has sent Me to heal the brokenhearted, To proclaim liberty to the captives And recovery of sight to the blind, To set at liberty those who are oppressed;</i> 
+                </p>
+
+                <p>If God has set me free from hopelessness, disheartenment, discouragement,
+                    desperation, distress, anguish and unhappiness -- AND HE HAS
+                    -- I am free indeed!
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Diabetes" id="diabetes" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Diabetes</h1>
+                <p>	<b>Psalm 84:11</b>
+                    <br>For the Lord God is a sun and shield: the Lord will give grace
+                    and glory: no good thing will he withhold from them that walk
+                    uprightly.
+                </p>
+
+                <p>My body is able to regulate the levels of nutrients in my blood.
+                    I can eat any nutritious food I can even enjoy sweets because
+                    by body functions optimally as it was designed by God.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Diarrhea" id="diarrhea" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Diarrhea</h1>
+                <p><b>Exodus 23:25</b>
+                    <br>
+                    <i>And ye shall serve the Lord your God, and he shall bless thy bread, and thy water; and I will take sickness away from the midst of thee.</i>
+                </p>
+                <p>
+                    My food and drink are blessed. What I eat and drink nourishes, refreshes, and strengthens
+                    me. My body extracts all nutrients from what I eat and eliminates
+                    whatever it dosen't need. What a wonderfully engineer system!
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Dizziness/Fainting" id="dizziness" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Dizziness/Fainting</h1>
+                <p><b>2 Corinthians 4:16</b>
+                    <br>
+                    <i>For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day.</i>
+                </p>
+                <p>
+                    My strength has been renewed inwardly. As I am inwardly, I manifest outwardly.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Fibroids/Female Problems" id="female" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Fibroids/Female Problems</h1>
+                <p>	<b>Matthew 9:20-22</b>
+                    <br>
+                    <i>And, behold, a woman, which was diseased with an issue of blood twelve years, came behind him, and touched the hem of his garment: 21 For she said within herself, If I may but touch his garment, I shall be whole. 22 But Jesus turned him about, and when he saw her, he said, Daughter, be of good comfort; thy faith hath made thee whole. And the woman was made whole from that hour.</i>
+                </p>
+                <p>
+                    The womb was created to be an instrument to bless both God and man. Nothing unsound,
+                    improper, harmful or lacking in blessing has anyplace within
+                    my body.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Flatulence" id="flatulence" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Flatulence</h1>
+                <p><b>2 Corinthians 2:16</b>
+                    <br>
+                    <i>To the one we are the savour of death unto death; and to the other the savour of life unto life. And who is sufficient for these things?</i>
+                </p>
+                <p>
+                    The only fragrance about me is the fragrance of life the sweet savour of Christ.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Flu" id="flu" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Flu</h1>
+                <p><b>Deuteronomy 7:15</b>
+                    <br>
+                    <i>And the Lord will take away from thee all sickness, and will put none of the evil diseases of Egypt, which thou knowest, upon thee; but will lay them upon all them that hate thee.</i>
+                </p>
+                <p>
+                    The common disease that seem to afflict everyone else never even touch me.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Foot Problems" id="foot" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Feet Problems</h1>
+                <p><b>Psalm 40:2</b>
+                    <br>
+                    <i>He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings.</i>
+                </p>
+                <p>
+                    God has great things in store for me. He has set me in position to be a blessing
+                    to all. He has set my feet upon a strong unshakable foundation
+                    and given me the strength to stand.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="G THru I" id="gilist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list" style="">
+                <li><a href="#gum">Gum Problems</a>
+                </li>
+                <li><a href="#hand">Hand Issues</a>
+                </li>
+                <li><a href="#headaches">Headaches</a>
+                </li>
+                <li><a href="#heart">Heart Problems</a>
+                </li>
+                <li><a href="#heartburn">Heartburn</a>
+                </li>
+                <li><a href="#hemorrhoids">Hemorrhoids</a>
+                </li>
+                <li><a href="#hernia">Hernia</a>
+                </li>
+                <li><a href="#herpes">Herpes</a>
+                </li>
+                <li><a href="#hypertension">High Blood Pressure</a>
+                </li>
+                <li><a href="#hip">Hip problems</a>
+                </li>
+                <li><a href="#hyperactivity">Hyperactivity</a>
+                </li>
+                <li><a href="#impotence">Impotence</a>
+                </li>
+                <li><a href="#infection">Infection</a>
+                </li>
+                <li><a href="#insomnia">Insomnia</a>
+                </li>
+                <li><a href="#itching">Itching</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Gum Problems" id="gum" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Gum Problems</h1>
+                <p><b>Genesis 50:21</b>
+                    <br>
+                    <i>Now therefore fear ye not: I will nourish you, and your little ones. And he comforted them, and spake kindly unto them.</i>
+                </p>
+                <p>
+                    God provides my nourishment and He is my nourishment. I meditate upon His goodness
+                    as a cow ruminates its feed.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Hand Issues" id="hand" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For
+                <br>Hand Problems
+                <p><b>Isaiah 52:11</b>
+                    <br>
+                    <i>Depart ye, depart ye, go ye out from thence, touch no unclean thing; go ye out of the midst of her; be ye clean, that bear the vessels of the Lord.</i>
+                </p>
+                <p>
+                    My hands are instruments of righteous. They are fit, strong, and able to perform
+                    any good work.
+                </p>
+            </h1>
+            </div>
+        </div>
+        <div class="panel" title="Headaches" id="headaches" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Headaches</h1>
+                <p><b>Psalm 25:18 </b>
+                    <br>
+                    <i> Look upon mine affliction and my pain; and forgive all my sins.</i>
+                </p>
+                <p>
+                    My mind is free from all hindrances, disruptions, distress and affliction. Nothing
+                    can interfere with my desire to think good thoughts, perform
+                    good deeds and speak good, kind words to all I encounter.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Heart Problems" id="heart" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Heart Problems</h1>
+                <p><b>Proverbs 4:20-22</b>
+                    <br>
+                    <i>My son, attend to my words; incline thine ear unto my sayings. 21 Let them not depart from thine eyes; keep them in the midst of thine heart. 22 For they are life unto those that find them, and health to all their flesh.</i>
+                </p>
+                <p>
+                    I will meditate upon your word/rhema. It strengthens the heart and life flows abundantly
+                    through me.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Heartburn" id="heartburn" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Heartburn</h1>
+                <p><b>Luke 24:32</b>
+                    <br>
+                    <i>And they said one to another, Did not our heart burn within us, while he talked with us by the way, and while he opened to us the scriptures?</i>
+                </p>
+                <p>
+                    I feel a burning from within, but it is not from food. Your presence and your rhema
+                    lights a perpetual fire within me
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Hemorrhoids" id="hemorrhoids" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Hemorrhoids</h1>
+                <p><b>Isaiah 52:2</b>
+                    <br>
+                    <i>Shake thyself from the dust; arise, and sit down, O Jerusalem: loose thyself from the bands of thy neck, O captive daughter of Zion.</i>
+                </p>
+                <p>
+                    I will rise up and sit down with no pain or discomfort. The Lord as set me free
+                    from all impediments.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Hernia" id="hernia" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Hernia</h1>
+                <p><b>Isaiah 41:10</b>
+                    <br>
+                    <i>Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.</i>
+                </p>
+                <p>
+                    The Lord God strengthens me. He is my support and my guard. He upholds my being
+                    with His Might Hand.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Herpes" id="herpes" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Herpes</h1>
+                <p><b>Proverbs 16:13 </b>
+                    <br>
+                    <i>Righteous lips are the delight of kings; and they love him that speaketh right.</i>
+                </p>
+                <p>With my lips I will bless and and lift up those I love. Nothing
+                    comes from my mouth that is not lovely, delightful, beautiful,
+                    uplifting and gentle.</p>
+            </div>
+        </div>
+        <div class="panel" title="High Blood Pressure" id="hypertension" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>High Blood Pressure</h1>
+                <p><b>Psalm 107:20</b>
+                    <br>
+                    <i>He sent his word, and healed them, and delivered them from their destructions.</i>
+                </p>
+                <p>
+                    The word of God is complete salvation and peace. My every need is met. I can face
+                    the pressures of this day knowing that my God is with me.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Hip Problems" id="hip" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Hip Problems</h1>
+                <p><b>Psalms 18:31-33</b>
+                    <br>
+                    <i>For who is God save the Lord? or who is a rock save our God? 32 It is God that girdeth me with strength, and maketh my way perfect. 33 He maketh my feet like hinds' feet, and setteth me upon my high places.</i>
+                </p>
+                <p>
+                    The Lord girds me about that I am able to stand firm on my two feet and accomplish
+                    any task. Assured, powerful and pain-free.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Hyperactivity" id="hyperactivity" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Hyperactivity</h1>
+                <p><b>Psalm 107:29,30</b>
+                    <br>
+                    <i>He maketh the storm a calm, so that the waves thereof are still. 30 Then are they glad because they be quiet; so he bringeth them unto their desired haven.</i>
+                </p>
+                <p>
+                    Our Lord is able to calm the winds, rains, and the sea. He can surely calm the
+                    raging storm that rises up within me.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Impotence" id="impotence" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Impotence</h1>
+                <p><b>Joshua 14:11</b>
+                    <br>
+                    <i>As yet I am as strong this day as I was in the day that Moses sent me: as my strength was then, even so is my strength now, for war, both to go out, and to come in.</i>
+                </p>
+                <p>
+                    The power of God can raise the dead. It can give me the strength and vitality of
+                    a young man.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Infections" id="infection" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Infections</h1>
+                <p><b>Psalms 91:3</b>
+                    <br>i&gt;Surely he shall deliver thee from the snare of the fowler,
+                    and from the noisome pestilence.</p>
+                <p>He is my shield and protector for pestilence and destruction. He
+                    strengthens me inwardly so that I can fight of the physical
+                    and spiritual attacks of the wicked one.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Insomnia" id="insomnia" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Insomnia</h1>
+                <p><b>Psalms 127:2</b>
+                    <br>
+                    <i>It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.</i>
+                </p>
+                <p>God gives those He loves-Me a full and restful sleep. I wake up
+                    refreshed and ready for the whatever the new day may bring.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Itching" id="itching" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center;">
+                <h1>Healing Words For<br>Itching</h1>
+                <p>	<b>II Kings 5:14</b>
+                    <br>
+                    <i>Then went he down, and dipped himself seven times in Jordan, according to the saying of the man of God: and his flesh came again like unto the flesh of a little child, and he was clean.</i>
+                </p>
+                <p>My skin is smooth,irritation and blemish free. As smooth as a baby's
+                    butt.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="J Thru N" id="jnlist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#jaw">Jaw Disorders</a>
+                </li>
+                <li><a href="#kidney">Kidney Problems</a>
+                </li>
+                <li><a href="#knee">Knee Pain</a>
+                </li>
+                <li><a href="#laryngitis">Laryngitis</a>
+                </li>
+                <li><a href="#leg">Leg Problems</a>
+                </li>
+                <li><a href="#liver">Liver Disease</a>
+                </li>
+                <li><a href="#hypotension">Low Blood Pressure</a>
+                </li>
+                <li><a href="#lungs">Lung Problem</a>
+                </li>
+                <li><a href="#menopause">Menopause</a>
+                </li>
+                <li><a href="#migraines">Migraines</a>
+                </li>
+                <li><a href="#muscle">Muscle Problems</a>
+                </li>
+                <li><a href="#nausea">Nausea</a>
+                </li>
+                <li><a href="#nervousness">Nervousness</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Jaw Disorders" id="jaw" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Jaw Problems</h1>
+                <p><b>Isaiah 59:21</b>
+                    <br>
+                    <i>As for me, this is my covenant with them, saith the Lord; My spirit that is upon thee, and my words which I have put in thy mouth, shall not depart out of thy mouth, nor out of the mouth of thy seed, nor out of the mouth of thy seed's seed, saith the Lord, from henceforth and for ever.</i>
+                </p>
+                <p>
+                    The word of The Lord has been placed in my heart and in my mouth. I am able to
+                    speak the Word without hesitancy or impediments.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Kidney Problems" id="kidney" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Kidney Problems </h1>
+                <p><b>Malachi 3:3</b>
+                    <br>
+                    <i>And he shall sit as a refiner and purifier of silver: and he shall purify the sons of Levi, and purge them as gold and silver, that they may offer unto the Lord an offering in righteousness.</i>
+                </p>
+                <p>
+                    The Holy Spirit purifies my spirit, soul, and body that I might be a fit and righteous
+                    vessel for the Lord
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Knee Pain" id="knee" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Knee</h1>
+                <p><b>Nehemiah 9:5</b>
+                    <br>
+                    <i>Then the Levites, Jeshua, and Kadmiel, Bani, Hashabniah, Sherebiah, Hodijah, Shebaniah, and Pethahiah, said, Stand up and bless the Lord your God for ever and ever: and blessed be thy glorious name, which is exalted above all blessing and praise.</i>
+                </p>
+                <p>
+                    I will stand up and bless the Lord at all times. I will rejoice, leaping for joy.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Laryngitis" id="laryngitis" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Laryngitis</h1>
+                <p><b>Psalms 35:28</b>
+                    <br>
+                    <i>And my tongue shall speak of thy righteousness and of thy praise all the day long.</i>
+                </p>
+                <p>
+                    With a strong, clear, and earnest mouth I shall speak of your righteousness and
+                    of your praise all the day long.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Leg Problems" id="leg" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Leg Problems</h1>
+                <p><b>Ephesians 6:13</b>
+                    <br>
+                    <i>Wherefore take unto you the whole armour of God, that ye may be able to withstand in the evil day, and having done all, to stand.</i>
+                </p>
+                <p>
+                    God's full armour is helps me stand in face of any attack of the enemy
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Liver Disease" id="liver" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Liver Disease</h1>
+                <p><b>Ephesians 1:18 (NIV)</b>
+                    <br>
+                    <i>I pray that the eyes of your heart may be enlightened in order that you may know the hope to which he has called you, the riches of his glorious inheritance in his holy people</i>
+                </p>
+                <p>
+                    My eyes are the window to my mind, body and soul. If you look deep into my eyes
+                    you will see nothing but health, vigor, vitality and wholesness
+                    as every organ an functions perfectly by design.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Low Blood Pressure" id="hypotension" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Low Blood Pressure</h1>
+                <p><b>Isaiah 40:29</b>
+                    <br>
+                    <i>He giveth power to the faint; and to them that have no might he increaseth strength.</i>
+                </p>
+                <p>
+                    He gives power to the faint; and to them that have no might he increases strength.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Lung Problems" id="lungs" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Lung Problems</h1>
+                <p><b>Lamentations 3:56 </b>
+                    <br>
+                    <i>Thou hast heard my voice: hide not thine ear at my breathing, at my cry.</i>
+                </p>
+                <p>I am able to inhale deeply and fill my lungs with life-giving Pneuma/Spirit/Breath
+                    that nourishes my body and my soul.</p>
+            </div>
+        </div>
+        <div class="panel" title="Menopause" id="menopause" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Menopause</h1>
+                <p><b>Acts 9:36</b>
+                    <br>
+                    <i>Now there was at Joppa a certain disciple named Tabitha, which by interpretation is called Dorcas: this woman was full of good works and almsdeeds which she did.</i>
+                </p>
+                <p>
+                    I am entering a new phase of my existence. Not only am I becoming more beautiful
+                    as the years go by, I am discovering how talented and valuable
+                    I am. I strive to be a blessing to every one I encounter.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Migraines" id="migraines" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Migraines</h1>
+                <p><b>Romans 16:20 </b>
+                    <br>
+                    <i>And the God of peace shall bruise Satan under your feet shortly. The grace of our Lord Jesus Christ be with you. Amen.</i>
+                </p><i>
+</i>
+                <p><i></i>
+                    God can handle Satan the adversary whens he attacks my mind. I rest in peace knowing
+                    that nothing is impossible with Him and He will quickly put
+                    the enemy under my feet.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Muscles Issues" id="muscle" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Muscles</h1>
+                <p><b>Judges 16:28</b>
+                    <br>
+                    <i>And Samson called unto the Lord, and said, O Lord God, remember me, I pray thee, and strengthen me, I pray thee, only this once, O God, that I may be at once avenged of the Philistines for my two eyes.</i>
+                </p>
+                <p>
+                    The Father strengthens me. His Strength, His Life, His Righteousness, His Spirit
+                    enables me to handle any problem or move any mountain.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Nausea" id="nausea" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Nausea</h1>
+                <p><b>Matthew 8:16-17</b>
+                    <i>When the even was come, they brought unto him many that were possessed with devils: and he cast out the spirits with his word, and healed all that were sick:17 That it might be fulfilled which was spoken by Esaias the prophet, saying, Himself took our infirmities, and bare our sicknesses.</i>
+                </p>
+                <p>
+                    My mind, soul, spirit and body are on one accord. There is no war raging within
+                    and nothing outside can disrupt my peace. I take delight in
+                    all the wholesome foods God provides for my nourishment and
+                    refreshment.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Nervousness" id="nervousness" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Nervousness</h1>
+                <p><b>Psalms 118:6-8</b>
+                    <br>
+                    <i>The Lord is on my side; I will not fear: what can man do unto me? 7 The Lord taketh my part with them that help me: therefore shall I see my desire upon them that hate me. 8 It is better to trust in the Lord than to put confidence in man.</i>
+                </p>
+                <p>I am confident and assured - not because of my own strength but
+                    because God is on my side.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="O Thru R" id="orlist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#overweight">Overweight</a>
+                </li>
+                <li><a href="#pain">Pain</a>
+                </li>
+                <li><a href="#paralysis">Paralysis</a>
+                </li>
+                <li><a href="#pinkeye">Pink Eye</a>
+                </li>
+                <li><a href="#pituitary">Pituitary Gland Disorder</a>
+                </li>
+                <li><a href="#pneumonia">Pneumonia</a>
+                </li>
+                <li><a href="#eyesight">Poor Eyesight</a>
+                </li>
+                <li><a href="#pms">Premenstrual Syndrome</a>
+                </li>
+                <li><a href="#prostate">Prostate Problems</a>
+                </li>
+                <li><a <a="" href="#rheumatism">Rheumatism</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Overweight" id="overweight" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Overweight</h1>
+                <p><b>I Corinthians 9:27</b>
+                    <br>
+                    <i>But I keep under my body, and bring it into subjection: lest that by any means, when I have preached to others, I myself should be a castaway.</i>
+                </p>
+                <p>
+                    I take charge of my body. My appetite submits to my will. My will submits to the
+                    Holy Spirit within me. I will live a consistent disciplined
+                    life. It is evident to all that I belong to God.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Pain" id="pain" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words<br>Pain</h1>
+                <p><b>2 Corinthians 6:4-6</b>
+                    <br>
+                    <i>But in all things approving ourselves as the ministers of God, in much patience, in afflictions, in necessities, in distresses, 5 In stripes, in imprisonments, in tumults, in labours, in watchings, in fastings; 6 By pureness, by knowledge, by long suffering, by kindness, by the Holy Ghost, by love unfeigned</i>
+                </p>
+                <p>I am not defeated by pain and suffering. I am able to bear all
+                    things, endure all things, rejoice in all things.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Paralysis" id="paralysis" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words<br>Paralysis</h1>
+                <p><b>Malachi 4:2</b>
+                    <br>
+                    <i>But for you who fear my name, the Sun of Righteousness will rise with healing in his wings. And you will go free, leaping with joy like calves let out to pasture. (NLT)</i>
+                </p>
+                <p>
+                    As I meditake on your Word, warmth courses through my body. As I trust in your
+                    promises, strength infuses my limbs. In my God I live, move
+                    and have my being
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Pink Eye" id="pinkeye" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words<br>Pink Eye</h1>
+                <p><b>Luke 11:34</b>
+                    <br>
+                    <i>The light of the body is the eye: therefore when thine eye is single, thy whole body also is full of light; but when thine eye is evil, thy body also is full of darkness.</i>
+                </p>
+                <p>
+                    My vision is clear. My inner sight is unaffected. By faith I know I am healed
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Pituitary Gland" id="pituitary" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words<br>Pituitary Gland</h1>
+                <p><b>Ephesians 4:15</b>
+                    <br>
+                    <i>But speaking the truth in love, may grow up into him in all things, which is the head, even Christ:</i>
+                </p>
+                <p>
+                    My glands, which you created to function perfectly, regulate my physical growth.
+                    Your Rhema develops the innerman that I might grow up, conformed
+                    to the image of your beloved Son
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Pneumonia" id="pneumonia" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words<br>Pneumonia</h1>
+                <p><b>Romans 8:11</b>
+                    <br>
+                    <i>But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you.</i>
+                </p>
+                <p>God's Spirit -- <i><b>His Breath</b></i> -- fills me and heals me
+                    of any and every disease.</p>
+            </div>
+        </div>
+        <div class="panel" title="Poor Eyesight" id="eyesight" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words<br>Poor Eyesight</h1>
+                <p><b>Habakkuk 2:2-4</b>
+                    <br>
+                    <i>And the Lord answered me, and said, Write the vision, and make it plain upon tables, that he may run that readeth it. 3 For the vision is yet for an appointed time, but at the end it shall speak, and not lie: though it tarry, wait for it; because it will surely come, it will not tarry. 4 Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith.</i>
+                </p>
+                <p>
+                    I can see plain all that is before me in the natural world and in the spirit world.
+                    In the present, and in the future.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Premenstrual Syndrome PMS" id="pms" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words<br>Premenstrual Syndrome PMS</h1>
+                <p><b>Philippians 4:7</b>
+                    <br>
+                    <i>And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.</i>
+                </p>
+                <p>This too shall pass. My love for my family and friends has never
+                    been stronger.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Prostate Problems" id="prostate" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Prostate Problems</h1>
+                <p><b>Matthew 17:20</b>
+                    <br>
+                    <i>And Jesus said unto them, Because of your unbelief: for verily I say unto you, If ye have faith as a grain of mustard seed, ye shall say unto this mountain, Remove hence to yonder place; and it shall remove; and nothing shall be impossible unto you.</i>
+                </p>
+                <p>
+                    I believe God for the removal of mountains in my life. This little lump has no
+                    chance at all.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Rheumatism" id="rheumatism" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Rheumatism</h1>
+                <p><b>Galatians 3:13-14</b>
+                    <br>
+                    <i>Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree: 14 That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith.</i>
+                </p>
+                <p>
+                    Nothing is able to hold me down of limit my mobility. I was created to enjoy live
+                    to serve God and my fellow man. My body is my friend, my ally,
+                    my instrument to live a full life.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="S Thru T" id="stlist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#seizures">Seizures</a>
+                </li>
+                <li><a href="#senility">Senility</a>
+                </li>
+                <li><a href="#shoulder">Shoulder Pain</a>
+                </li>
+                <li><a href="#sinus">Sinus Problems</a>
+                </li>
+                <li><a href="#skin">Skin Disorders</a>
+                </li>
+                <li><a href="#sorethroat">Sore Throat</a>
+                </li>
+                <li><a href="#spasms">Spasms</a>
+                </li>
+                <li><a href="#stomach">Stomach Disorders</a>
+                </li>
+                <li><a href="#stroke">Stroke</a>
+                </li>
+                <li><a href="#thyroid">Thyroid Illness</a>
+                </li>
+                <li><a href="#tumors">Tumors</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Seizures" id="seizures" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Seizures</h1>
+                <p><b>Matthew 17:19-22</b>
+                    <br>
+                    <i>Then came the disciples to Jesus apart, and said, Why could not we cast him out? 20 And Jesus said unto them, Because of your unbelief: for verily I say unto you, If ye have faith as a grain of mustard seed, ye shall say unto this mountain, Remove hence to yonder place; and it shall remove; and nothing shall be impossible unto you.</i>
+                </p>
+                <p>
+                    God is able to bring my body fully under control of my will. And my will submits
+                    to my spirit man
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Senility" id="senility" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Senility</h1>
+                <p><b>Psalms 42:11</b>
+                    <br>
+                    <i>Why are you cast down, oh my soul? and why are you disquieted within me? Oh my soul hope in God: for I shall yet praise Him who is the health of my countenance and my God.</i>
+                </p>
+
+                <p>I am able to function as well at my present age as any young person.
+                    Better even
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Shoulder Pain" id="shoulder" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Shoulder Pain</h1>
+                <p><b>Psalms 141:2</b>
+                    <br>
+                    <i>Let my prayer be set forth before thee as incense; and the lifting up of my hands as the evening sacrifice.</i>
+                </p>
+                <p>Both my arms enjoy a full range of motion. I can lift my hand to
+                    greet a friend or love one. I can lift up a child for a hug
+                    or a kiss. I can lift up my hands to heaven in praise to the
+                    God who heals me.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Sinus Problems" id="sinus" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Sinus Problems</h1>
+                <p><b>Revelations 22:1</b>
+                    <br>
+                    <i>And he shewed me a pure river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb.</i>
+                </p>
+                <p>
+                    The fluids within my sinus passages run clearly and freely, performing the work
+                    God intended.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Skin Problems" id="skin" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Skin Problems</h1>
+                <p><b>Mark 1:40,41</b>
+                    <br>
+                    <i>And there came a leper to him, beseeching him, and kneeling down to him, and saying unto him, If thou wilt, thou canst make me clean. 41 And Jesus, moved with compassion, put forth his hand, and touched him, and saith unto him, I will; be thou clean.</i>
+                </p>
+
+                <p>My skin is perfect and free from any blemish, spot, wrinkle, or
+                    imperfection. It is God who heals me and keeps me whole
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Sore Throat" id="sorethroat" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Sore Throat</h1>
+                <p><b>Job 32:20</b>
+                    <br>
+                    <i>I will speak, that I may be refreshed: I will open my lips and answer.</i>
+                </p>
+                <p>I will speak and healing will come to my throat. I will verbally
+                    affirm the goodness and love of my Father. I will praise Him
+                    for His wonderful healing.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Spasms" id="spasms" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Spasms</h1>
+                <p><b>I Thessalonian 5:13</b>
+                    <br>
+                    <i>And to esteem them very highly in love for their work's sake. And be at peace among yourselves.</i>
+                </p>
+                <p>
+                    There is peace within my body. There various organs cooperate and work in unison.
+                    Every part works together as one unite united in love
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Stomach Problems" id="stomach" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Stomach Problems</h1>
+                <p><b>I Timothy 5:23</b>
+                    <br>
+                    <i>Drink no longer water, but use a little wine for thy stomach's sake and thine often infirmities.</i>
+                </p>
+                <p>
+                    There are many routes through which God heals me. Fruits, herbs, meat, and drink
+                    nourish and sustain me. I have no need to suffer for any illness.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Stroke" id="stroke" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Stroke</h1>
+                <p><b>Philippians 4:6-7</b>
+                    <br>
+                    <i>Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. 7 And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.</i>
+                </p>
+                <p>The storms that once raged in my mind have subsided. The Lord who
+                    spoke to the waves and wind: "Peace, be still," has brought
+                    harmony, serenity, calm, tranquility and rest to my mind, body
+                    and soul.</p>
+                <p></p>
+            </div>
+        </div>
+        <div class="panel" title="Thyroid Illness" id="thyroid" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Thyroid Problems</h1>
+                <p><b>Psalm 42:11</b>
+                    <br>
+                    <i>Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God.</i>
+                </p>
+                <p>Just as the thyroid produces the hormones needed to regulate my
+                    metabolism, the Spirit of God energizes my mind, body and soul.
+                    He is the Master Physician who does all things decently, wisely
+                    and in perfect order.</p>
+            </div>
+        </div>
+        <div class="panel" title="Tumors" id="tumors" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Tumors</h1>
+                <p><b>Psalm 91:9-10</b>
+                    <br>
+                    <i>Because thou hast made the Lord, which is my refuge, even the most High, thy habitation; 10 There shall no evil befall thee, neither shall any plague come nigh thy dwelling.</i>
+                </p>
+                <p>No plaque, nor pestilence, nor sickness, nor demonic oppression
+                    can touch me because The Lord is my habitation
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="U Thru Z" id="uzlist" data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#ulcers">Ulcers</a>
+                </li>
+                <li><a href="#uti">Urinary Tract Infection</a>
+                </li>
+                <li><a href="#varicose">Varicose Veins</a>
+                </li>
+                <li><a href="#vd">Venereal Disease/STDs</a>
+                </li>
+                <li><a href="#viral">Viral Infection</a>
+                </li>
+                <li><a href="#vomiting">Vomiting</a>
+                </li>
+                <li><a href="#warts">Warts</a>
+                </li>
+                <li><a href="#yeast">Yeast Infection</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Ulcers" id="ulcers" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Ulcers</h1>
+                <p><b>Philippians 4:6</b>
+                    <br>
+                    <i>Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.</i>
+                </p>
+                <p>I am anxious for nothing. The peace of God reigns within. I make
+                    my requests known then I give thanks and praise for the answered
+                    prayer.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Urinary Infections" id="uti" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Urinary Infections</h1>
+                <p><b>Psalm 139:13-14 </b>
+                    <br>
+                    <i>For thou hast possessed my reins (kidneys): thou hast covered me in my mother's womb.14 I will praise thee; for I am fearfully and wonderfully made: marvelous are thy works; and that my soul knoweth right well.</i>
+                </p>
+                <p>All the organs of my body are fearfully and wonderfully made by
+                    an all-wise Creator. My healing comes quickly and thoroughly.
+                    I have no need to feel anxiety as I face life.</p>
+            </div>
+        </div>
+        <div class="panel" title="Varicose Veins" id="varicose" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Varicose Veins</h1>
+                <p><b>Song of Solomon 5:15</b>
+                    <br>
+                    <i>His legs are as pillars of marble, set upon sockets of fine gold: his countenance is as Lebanon, excellent as the cedars.</i>
+                </p>
+                <p>God looks regards my heart: not my outward appearance. In His eyes
+                    and those who love Him, my legs are things of beauty. Strong,
+                    stable, smooth, well-formed, elegant and free from blemished.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="STDs/Venereal Disease" id="vd" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center;">
+                <h1>Healing Words For<br>Venereal Disease/STDs</h1>
+                <p><b>Isaiah 61:7</b>
+                    <br>
+                    <i>For your shame ye shall have double; and for confusion they shall rejoice in their portion: therefore in their land they shall possess the double: everlasting joy shall be unto them.</i>
+                </p>
+                <p>Thank you Father for forgiving and forgetting my sins. I repent
+                    and turn to You. And -- wonder of wonders -- You smile on me,
+                    love me and bless me with a double portion of peace and everlasting
+                    joy.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Viral Infections" id="viral" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Viral Infections</h1>
+                <p><b>Isaiah 54:17</b>
+                    <br>
+                    <i>No weapon that is formed against thee shall prosper; and every tongue that shall rise against thee in judgment thou shalt condemn. This is the heritage of the servants of the Lord, and their righteousness is of me, saith the Lord.</i>
+                </p>
+                <p>
+                    There is no virus on this earth that is a match for the healing power of God. Go
+                    ahead and mutate if your like.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Vomiting" id="vomiting" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Vomiting</h1>
+                <p><b>Psalms 103:2-3</b>
+                    <br>
+                    <i>Bless the Lord, O my soul, and forget not all his benefits: 3 Who forgiveth all thine iniquities; who healeth all thy diseases;</i>
+                </p>
+                <p>
+                    It does not matter what is causing these symptoms. I trust God. He is working this
+                    thing out within me for my own good. He purges me from sin,
+                    sickness, and rebellion.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Warts" id="warts" data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Warts</h1>
+                <p><b>Isaiah 61:3</b>
+                    <br>
+                    <i>To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the Lord, that he might be glorified.</i>
+                </p>
+                <p>
+                    In place of blemishes, I am made spotless. In place of filthiness, I am washed
+                    clean. In place of sadness, I rejoice.
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Yeast Infection" id="yeast" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                <h1>Healing Words For<br>Yeast Infection</h1>
+                <p><b>Luke 8:48</b>
+                    <br>
+                    <i>And he said unto her, Daughter, be of good comfort: thy faith hath made thee whole; go in peace.</i>
+                </p>
+                <p>
+                    My faith/trust/reliance in God heals me. I receive my healing from the most stubborn
+                    illness. I don't accept remission -- I am healed
+                </p>
+            </div>
+        </div>
+        <div class="panel" title="Prayer Request" id="prayerRequest" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text">
+                <div class="text_item" data-appbuilder-object="text" style="text-align:center">
+                    <iframe src="http://crucifiedandexchanged.org/tinc?key=cHqF4m8j" style="width:320px;height:450px"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="navbar" class="footer"> <a href="#main" class="icon home">Home</a><a href="#page_2" class="icon user">Start Healing</a>
+        <a href="#About" class="icon info">About</a><a href="#prayerRequest" class="icon mail">Need Prayer?</a>
+    </div>
+    <header id="header_0" data-appbuilder-object="header">
+        <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
+        <h1 id="pageTitle" class="">test</h1> 
+    </header>
+
+</div>
+
+
+
+
+
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
